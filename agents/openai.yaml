@@ -1,0 +1,8 @@
+interface:
+  display_name: "数据与 AI 面试深挖教练"
+  short_description: "深挖数据与 AI 项目经历，训练业务与技术面试表达"
+  default_prompt: "使用 $data-ai-interview-coach 读取我的材料并开始中文面试深挖。"
+
+policy:
+  allow_implicit_invocation: true
+
