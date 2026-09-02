@@ -8,7 +8,7 @@
 
 - [x] V1.1 产品需求确认
 - [x] 阶段一：核心工作流与状态模型
-- [ ] 阶段二：追问引擎
+- [x] 阶段二：追问引擎
 - [ ] 阶段三：模型、上下文与安全细化
 - [ ] 阶段四：岗位与技术知识资源
 - [ ] 阶段五：输出模板与恢复机制
@@ -29,11 +29,16 @@
 - `SKILL.md`：入口与核心行为约束；
 - `agents/openai.yaml`：Skill 界面元数据；
 - `references/workflow.md`：整体工作流；
+- `references/question-engine.md`：动态追问决策循环；
+- `references/business-deep-dive.md`：业务证据链与追问规匙；
+- `references/technical-defense.md`：技术答辩与编程知识边界；
+- `references/behavioral-and-mock.md`：行为与模拟面试规则；
 - `references/state-schema.md`：状态和跨会话恢复模型；
 - `references/mode-routing.md`：面试模式选择与切换；
 - `references/runtime-and-context.md`：模型、上下文和额度控制；
 - `references/completion-and-output.md`：结束条件与交付结构；
 - `docs/product-spec-v1.1.md`：已确认的产品规格基线。
+- `evals/phase-2-scenarios.md`：阶段二行为验收场景。
 
 ## 隐私提示
 
