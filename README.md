@@ -30,7 +30,7 @@
 - `agents/openai.yaml`：Skill 界面元数据；
 - `references/workflow.md`：整体工作流；
 - `references/question-engine.md`：动态追问决策循环；
-- `references/business-deep-dive.md`：业务证据链与追问规匙；
+- `references/business-deep-dive.md`：业务证据链与追问规则；
 - `references/technical-defense.md`：技术答辩与编程知识边界；
 - `references/behavioral-and-mock.md`：行为与模拟面试规则；
 - `references/state-schema.md`：状态和跨会话恢复模型；
