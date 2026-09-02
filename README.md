@@ -9,7 +9,7 @@
 - [x] V1.1 产品需求确认
 - [x] 阶段一：核心工作流与状态模型
 - [x] 阶段二：追问引擎
-- [ ] 阶段三：模型、上下文与安全细化
+- [x] 阶段三：模型、上下文与安全细化
 - [ ] 阶段四：岗位与技术知识资源
 - [ ] 阶段五：输出模板与恢复机制
 - [ ] 阶段六：评测与发布
@@ -36,9 +36,12 @@
 - `references/state-schema.md`：状态和跨会话恢复模型；
 - `references/mode-routing.md`：面试模式选择与切换；
 - `references/runtime-and-context.md`：模型、上下文和额度控制；
+- `references/security-and-research.md`：材料安全、提示注入与互联网研究；
 - `references/completion-and-output.md`：结束条件与交付结构；
-- `docs/product-spec-v1.1.md`：已确认的产品规格基线。
+- `docs/product-spec-v1.1.md`：已确认的产品规格基线；
+- `docs/phase-3-runtime-context-safety.md`：阶段三设计与验收不变量；
 - `evals/phase-2-scenarios.md`：阶段二行为验收场景。
+- `evals/phase-3-scenarios.md`：阶段三上下文与安全验收场景。
 
 ## 隐私提示
 
