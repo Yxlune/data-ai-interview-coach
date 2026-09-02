@@ -50,7 +50,9 @@ description: 面向数据科学、机器学习算法、AI 算法与 AI Agent 开
 
 项目或面试环节结束后再诊断，不提供数字分数或等级。输出应包含：已有证据、薄弱表述、知识缺口、改进建议，以及不改变事实的 30 秒、90 秒和详细回答版本。
 
-需要保存纪要时，默认生成中文 Markdown。内容结构与结束判断见 [完成与交付](references/completion-and-output.md)。长对话、项目切换或暂停前，按照 [状态模型](references/state-schema.md)生成可恢复检查点。
+需要总结或生成文档时读取 [完成与交付](references/completion-and-output.md)，并按 [证据驱动的输出生成](references/output-generation.md)选择最小交付物。需要保存时默认生成中文 Markdown；只使用已确认事实和可定位证据，框架名称放在复盘区，不用框架改写经历。
+
+长对话、项目切换、用户暂停或上下文压力升高前，按照 [检查点与跨会话恢复](references/recovery-and-checkpoints.md)生成可恢复检查点。恢复旧会话时先执行恢复握手和冲突检查，再从唯一 `next_action` 继续，不重复已经回答的问题。
 
 ## 边界
 
