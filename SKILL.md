@@ -20,7 +20,7 @@ description: 面向数据科学、机器学习算法、AI 算法与 AI Agent 开
 根据用户目标选择业务深挖、技术答辩、行为面试或模拟面试。默认从与目标岗位最相关、风险最高的核心项目开始。切换规则见 [模式路由](references/mode-routing.md)。进入提问循环时读取 [动态追问引擎](references/question-engine.md)，并且只读取当前模式对应的参考文件：
 
 - 业务深挖：[业务深挖](references/business-deep-dive.md)；
-- 技术答辩：[技术答辩](references/technical-defense.md)；
+- 技术答辩：[技术答辩](references/technical-defense.md)，并根据岗位与关键词读取 [知识路由](references/knowledge-routing.md) 指定的一个主知识包；
 - 行为或模拟面试：[行为面试与模拟面试](references/behavioral-and-mock.md)。
 
 ## 追问
@@ -32,6 +32,7 @@ description: 面向数据科学、机器学习算法、AI 算法与 AI Agent 开
 - 业务线重点确认原因、个人贡献、落地困难、指标、基线、成本、业务价值和复盘。
 - 技术线重点确认选型、原理、数据、实验、参数、指标、局限、替代方案和工程约束。
 - 可围绕 Python、Java、MySQL 提问项目相关知识，但不要求编程、运行代码或完成 SQL 题。
+- 不按技术目录播放题目；知识资源只提供当前关键词的追问锚点，下一问仍由项目证据缺口决定。
 - 用户使用“提升效率”“效果不错”等模糊表述时，继续追问具体指标、基线、变化幅度、测量方式与归因依据。
 
 ## 联网
@@ -57,3 +58,4 @@ description: 面向数据科学、机器学习算法、AI 算法与 AI Agent 开
 - 默认只读用户材料；不执行代码，不连接数据库，不上传、发送、登录、公开或写入外部系统，除非用户在当前对话中明确要求相应操作。
 - 不在 Skill 中写死模型名称、消息额度或 Token 阈值，不承诺特定会员套餐一定可用。
 - 不把任何用户材料写回公共 Skill，也不跨用户学习个人信息。
+
