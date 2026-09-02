@@ -16,3 +16,8 @@ Thumbs.db
 .idea/
 .vscode/
 
+# Validation caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
