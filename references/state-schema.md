@@ -1,13 +1,16 @@
 # 状态模型
 
-状态可以保存在对话中，也可以序列化为 `interview-prep-state.md`。禁止保存密钥和不必要的个人身份信息。
+状态可以保存在对话中，也可以序列化为 `interview-prep-state.md`。使用 [状态模板](../assets/templates/interview-prep-state.md)；创建和恢复流程见 [检查点与跨会话恢复](recovery-and-checkpoints.md)。禁止保存密钥和不必要的个人身份信息。
 
 ## 顶层字段
 
 ```yaml
-schema_version: "1.1"
+schema_version: "1.2"
 updated_at: "YYYY-MM-DD"
 language: "zh-CN"
+checkpoint_type: "compact|full"
+checkpoint_reason: "completed|paused|switch|context_pressure|interrupted|before_output"
+status: "in_progress|paused|completed|blocked"
 target:
   roles: []
   seniority: "校招/应届生"
@@ -16,6 +19,9 @@ session:
   mode: "business|technical|behavioral|mock"
   depth: "compact|full"
   active_project: ""
+  active_claim: ""
+  current_chain: ""
+  last_answered_question: ""
   next_action: ""
 runtime:
   capabilities:
@@ -32,7 +38,9 @@ competencies: []
 technology_graph: []
 research_cache: []
 open_questions: []
+artifacts: []
 safety_notes: []
+migration_notes: []
 ```
 
 ## 材料记录
@@ -91,14 +99,18 @@ safety_notes: []
 
 每条 `safety_note` 只记录风险类型、材料位置、采取的最小化措施和是否需要用户处理，不保存敏感原文。
 
+## 产物记录
+
+每个 `artifact` 记录类型、路径或对话位置、生成时间、依据的检查点、覆盖项目和状态。状态使用 `draft`、`reviewed`、`final` 或 `stale`。事实变化时只把受影响产物标为 `stale`，不得默认重新生成全部文档。
+
 ## 恢复规则
 
-恢复时先比较状态文件与当前材料：
+恢复时先执行安全预检，并比较状态文件、当前材料和用户本次目标：
 
 - 无冲突：从 `next_action` 继续；
 - 新材料补充：合并为待确认事实；
 - 存在冲突：展示冲突并让用户确认；
 - 状态版本不兼容：读取可识别字段并创建新版本检查点。
 
-恢复后先重新执行安全预检，再读取 `next_action` 所需的当前项目包。不得因为状态文件曾经记录某项内容，就跳过新材料中的冲突、权限或敏感性检查。
+恢复后只读取 `next_action` 所需的当前项目包。先向用户简述恢复位置和冲突，再继续唯一下一行动；不得重复已经回答的问题，也不得因为状态文件曾经记录某项内容，就跳过新材料中的冲突、权限或敏感性检查。
 
