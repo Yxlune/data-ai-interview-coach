@@ -11,7 +11,7 @@
 - [x] 阶段二：追问引擎
 - [x] 阶段三：模型、上下文与安全细化
 - [x] 阶段四：岗位与技术知识资源
-- [ ] 阶段五：输出模板与恢复机制
+- [x] 阶段五：输出模板与恢复机制
 - [ ] 阶段六：评测与发布
 
 ## 设计原则
@@ -37,6 +37,8 @@
 - `references/ml-ai-algorithm-knowledge.md`：机器学习、深度学习与 AI 算法追问锚点；
 - `references/ai-agent-knowledge.md`：Agent、RAG、工具、状态、安全和评测；
 - `references/programming-and-sql-knowledge.md`：Python、Java、MySQL 项目知识；
+- `references/output-generation.md`：证据分层、输出路由与一致性检查；
+- `references/recovery-and-checkpoints.md`：检查点、暂停与跨会话恢复；
 - `references/behavioral-and-mock.md`：行为与模拟面试规则；
 - `references/state-schema.md`：状态和跨会话恢复模型；
 - `references/mode-routing.md`：面试模式选择与切换；
@@ -46,9 +48,12 @@
 - `docs/product-spec-v1.1.md`：已确认的产品规格基线；
 - `docs/phase-3-runtime-context-safety.md`：阶段三设计与验收不变量；
 - `docs/phase-4-knowledge-resources.md`：阶段四知识资源设计；
+- `docs/phase-5-output-and-recovery.md`：阶段五输出与恢复设计；
 - `evals/phase-2-scenarios.md`：阶段二行为验收场景。
 - `evals/phase-3-scenarios.md`：阶段三上下文与安全验收场景。
 - `evals/phase-4-scenarios.md`：阶段四岗位与技术知识验收场景。
+- `evals/phase-5-scenarios.md`：阶段五输出与恢复验收场景。
+- `assets/templates/`：项目纪要、综合准备文档与恢复状态模板。
 
 ## 隐私提示
 
